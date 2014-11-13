@@ -13,15 +13,15 @@ var bootstrap = function (options) {
   var routers = [];
   options = options || {};
   var directory = options.directory || 'controllers';
-  var directory = path.join(dirname, directory);
+  directory = path.join(dirname, directory);
   if (!fs.existsSync(directory)) {
     var err = 'directory ' + options.directory + " doesn't exist";
     throw new Error(err);
   }
   rd.eachFileFilterSync(directory, /\.js$/, function (file) {
-    var dirname = path.dirname(file);
-    var basename = path.basename(file);
-    files.push({dirname: dirname, basename: basename});
+    var dir = path.dirname(file);
+    var base = path.basename(file);
+    files.push({dirname: dir, basename: base});
   });
   files.forEach(function (file) {
     if (file && file.basename != 'index.js') {
