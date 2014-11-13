@@ -5,7 +5,9 @@ var Router = require('koa-router');
 var mount = require('koa-mount');
 var compose = require('koa-compose');
 var fs = require('fs');
-var dirname = path.dirname(require.main.filename);
+var caller = require('caller');
+var dirname = path.dirname(caller());
+
 
 
 var bootstrap = function (options) {
@@ -15,7 +17,7 @@ var bootstrap = function (options) {
   var directory = options.directory || 'controllers';
   directory = path.join(dirname, directory);
   if (!fs.existsSync(directory)) {
-    var err = 'directory ' + options.directory + " doesn't exist";
+    var err = 'directory ' + directory + " doesn't exist";
     throw new Error(err);
   }
   rd.eachFileFilterSync(directory, /\.js$/, function (file) {

@@ -3,7 +3,7 @@
  */
 module.exports = function(router){
   router.get('/', function *(){
-    this.body = 'Hello Mac';
+    this.body = 'Hello MAC';
   });
   return router;
 };

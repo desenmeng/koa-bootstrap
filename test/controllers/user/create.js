@@ -3,7 +3,7 @@
  */
 module.exports = function(router){
   router.get('/', function *(){
-    this.body = 'Hello CSS';
+    this.body = 'Hello Create';
   });
   return router;
 };

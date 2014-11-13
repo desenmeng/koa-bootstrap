@@ -3,7 +3,7 @@
  */
 var koa = require('koa');
 var bootstrap = require('..');
-var app = koa();
+var app = module.exports = koa();
 
 app.use(bootstrap());
 
