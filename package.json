@@ -1,6 +1,6 @@
 {
   "name": "koa-bootstrap",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "bootstrap for koa",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "strip-path": "~1.0.0",
     "rd": "0.0.2",
     "koa-router": "~3.5.0",
-    "koa-mount": "~1.3.0"
+    "koa-mount": "~1.3.0",
+    "koa-compose": "~2.3.0"
   }
 }

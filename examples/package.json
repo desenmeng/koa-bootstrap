@@ -1,0 +1,7 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "dependencies": {
+    "koa": "~0.13.0"
+  }
+}
