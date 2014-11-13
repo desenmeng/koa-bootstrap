@@ -20,27 +20,27 @@ describe('user/create', function(){
       .expect('Hello Create', done);
   });
 });
-describe('product/mac', function(){
+describe('computer/mac', function(){
   it('should say "Hello MAC"', function(done){
     request
-      .get('/product/mac')
+      .get('/computer/mac')
       .expect(200)
       .expect('Hello MAC', done);
   });
 });
-describe('product/pc', function(){
+describe('computer/pc', function(){
   it('should say "Hello PC"', function(done){
     request
-      .get('/product/pc')
+      .get('/computer/pc')
       .expect(200)
       .expect('Hello PC', done);
   });
 });
 
-describe('product', function(){
+describe('computer', function(){
   it('should say "Not Found"', function(done){
     request
-      .get('/product')
+      .get('/computer')
       .expect(404)
       .expect('Not Found', done);
   });
